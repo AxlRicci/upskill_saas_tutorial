@@ -1,0 +1,7 @@
+Memberships
+-- what page do you present choices?
+* User should see link for basic plan on home page
+* User should see link for pro plan on home page
+-- How will app know user choice when registering?
+* Basic plan link should point to regular devise sign up form
+* Pro plan link should point to a custom sign up form
