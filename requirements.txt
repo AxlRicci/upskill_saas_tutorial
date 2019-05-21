@@ -1,7 +1,18 @@
 Memberships
 -- what page do you present choices?
-* User should see link for basic plan on home page
-* User should see link for pro plan on home page
+* User should see link for basic plan on home page.
+* User should see link for pro plan on home page.
 -- How will app know user choice when registering?
-* Basic plan link should point to regular devise sign up form
-* Pro plan link should point to a custom sign up form
+* Basic plan link should point to regular devise sign up form.
+* Pro plan link should point to a custom sign up form.
+
+Stripe integration
+* Users should have a stripe customer token in the users table.
+* Javascript should prevent pro form from submitting, when user fills it out
+and should send card info to stripe.
+* Javascript should send user fields and card token to our rails app. Rails app
+should validate the user fields. Rails app will not whether user is signing up
+for plan 1 or plan 2.
+* Once validated, rails should send user info (email, plan id) and card token
+to stripe server and stripe will create a subscription and send back customer
+token. Rails should save customer token and user information to our database.
